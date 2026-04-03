@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Stickers | Custom Sticker & Branding Solutions</title>
+  <meta name="description" content="Visual Stickers provides custom stickers, vehicle wraps, business branding, wall decals, product labels, and design services in Coimbatore." />
+  <meta name="keywords" content="stickers, custom stickers, vehicle wraps, shop branding, product labels, Coimbatore stickers, wall decals, branding" />
+  <meta name="author" content="Visual Stickers" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --navy: #0d1b2e;
+      --red: #ff341f;
+      --yellow: #d8f000;
+      --white: #ffffff;
+      --light: #f5f7fb;
+      --muted: #6c7a8f;
+      --border: #dde5f0;
+      --shadow: 0 12px 30px rgba(13, 27, 46, 0.08);
+      --radius: 18px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(13, 27, 46, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .nav-logo img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: transparent;
+    }
+
+    .nav-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 30px;
+      letter-spacing: 1px;
+      color: var(--yellow);
+      line-height: 1;
+    }
+
+    .nav-logo-text span {
+      color: var(--red);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #c7d0dd;
+      font-size: 15px;
+      font-weight: 500;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-btn {
+      background: var(--red);
+      color: white !important;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .nav-btn:hover {
+      background: #d62d1a;
+      color: white !important;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0d1b2e 0%, #102544 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 70px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      background: rgba(216, 240, 0, 0.05);
+      border-radius: 50%;
+      top: -100px;
+      right: -80px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: rgba(255, 52, 31, 0.08);
+      border-radius: 50%;
+      bottom: -80px;
+      left: -40px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(216, 240, 0, 0.1);
+      color: var(--yellow);
+      border: 1px solid rgba(216, 240, 0, 0.28);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 76px;
+      line-height: 0.95;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 .red {
+      color: var(--red);
+    }
+
+    .hero h1 .yellow {
+      color: var(--yellow);
+    }
+
+    .hero p {
+      color: #b4bfd0;
+      font-size: 17px;
+      max-width: 580px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .btn-main,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: 0.25s ease;
+      font-size: 15px;
+    }
+
+    .btn-main {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 10px 24px rgba(255, 52, 31, 0.25);
+    }
+
+    .btn-main:hover {
+      transform: translateY(-2px);
+      background: #d62d1a;
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(216, 240, 0, 0.3);
+      color: var(--yellow);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-outline:hover {
+      background: rgba(216, 240, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 18px;
+      border-radius: 14px;
+      min-width: 140px;
+    }
+
+    .stat h3 {
+      font-size: 24px;
+      color: var(--yellow);
+      margin-bottom: 4px;
+    }
+
+    .stat p {
+      font-size: 13px;
+      color: #9fb0c9;
+      margin: 0;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-logo-box {
+      background: #081426;
+      border-radius: 24px;
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .hero-logo-box img {
+      max-width: 100%;
+      width: 260px;
+      border-radius: 18px;
+      object-fit: contain;
+    }
+
+    .hero-services-mini {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .mini-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .mini-box span {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .mini-box p {
+      color: #d8deea;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* SECTION COMMON */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(255, 52, 31, 0.08);
+      color: var(--red);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 52px;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 17px;
+      margin-bottom: 44px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-box h3 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .about-box p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    .about-features {
+      display: grid;
+      gap: 16px;
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--navy);
+      color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .feature-item h4 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .feature-item p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    /* SERVICES */
+    .services {
+      background: var(--light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px 24px;
+      transition: 0.3s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--yellow);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 16px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* WHY US */
+    .why {
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .why-card {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      display: flex;
+      gap: 18px;
+      transition: 0.3s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .why-number {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      flex-shrink: 0;
+    }
+
+    .why-card h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* PROCESS */
+    .process {
+      background: linear-gradient(135deg, #0d1b2e 0%, #102544 100%);
+      color: white;
+    }
+
+    .process .section-sub {
+      color: #b4bfd0;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      padding: 26px 22px;
+      text-align: center;
+    }
+
+    .process-card .step {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--red);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin: 0 auto 16px;
+      font-size: 18px;
+    }
+
+    .process-card h4 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .process-card p {
+      color: #c3cfdf;
+      font-size: 14px;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .contact-card,
+    .contact-info {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h3,
+    .contact-info h3 {
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .contact-card p,
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      background: var(--light);
+      border: 1px solid var(--border);
+      padding: 16px 18px;
+      border-radius: 16px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .contact-item span {
+      font-size: 20px;
+    }
+
+    .quote-box {
+      background: linear-gradient(135deg, var(--red), #ff5a42);
+      color: white;
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 22px;
+    }
+
+    .quote-box h4 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .quote-box p {
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 20px;
+    }
+
+    .quote-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .quote-actions a {
+      background: white;
+      color: var(--red);
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .quote-actions a:hover {
+      opacity: 0.9;
+    }
+
+    /* CTA BAND */
+    .cta-band {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 70px 24px;
+    }
+
+    .cta-band h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 58px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .cta-band p {
+      color: #b7c1d0;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 17px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #08111e;
+      color: #8190a6;
+      padding: 26px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 14px;
+    }
+
+    footer span {
+      color: var(--yellow);
+      font-weight: 600;
+    }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
+      z-index: 1000;
+      transition: 0.25s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* MOBILE */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid,
+      .services-grid,
+      .why-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 58px;
+      }
+
+      .section-title {
+        font-size: 42px;
+      }
+
+      .hero-logo-box img {
+        width: 220px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrap {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 70px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero p,
+      .section-sub,
+      .cta-band p {
+        font-size: 15px;
+      }
+
+      .section-title {
+        font-size: 36px;
+      }
+
+      .cta-band h2 {
+        font-size: 42px;
+      }
+
+      .hero-actions,
+      .quote-actions {
+        flex-direction: column;
+      }
+
+      .btn-main,
+      .btn-outline,
+      .quote-actions a {
+        width: 100%;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container nav-wrap">
+      <div class="nav-logo">
+        <img src="logo.jpeg" alt="Visual Stickers Logo">
+        <div class="nav-logo-text">Visual <span>Stickers</span></div>
+      </div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/919944678771" target="_blank" class="nav-btn">WhatsApp Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">Custom Sticker & Branding Experts</div>
+        <h1>
+          Make Your <span class="red">Brand</span><br>
+          Stand Out <span class="yellow">Everywhere</span>
+        </h1>
+        <p>
+          At Visual Stickers, we create high-quality custom stickers, vehicle wraps,
+          branding decals, shop graphics, and print solutions that help businesses
+          look bold, modern, and unforgettable.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn-main">Get Free Quote</a>
+          <a href="#services" class="btn-outline">Explore Services</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>100%</h3>
+            <p>Custom Design Support</p>
+          </div>
+          <div class="stat">
+            <h3>Fast</h3>
+            <p>Quick Delivery & Installation</p>
+          </div>
+          <div class="stat">
+            <h3>Premium</h3>
+            <p>Durable Print Quality</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-logo-box">
+          <img src="logo.jpeg" alt="Visual Stickers Logo">
+        </div>
+
+        <div class="hero-services-mini">
+          <div class="mini-box">
+            <span>🚗</span>
+            <p>Vehicle Wraps</p>
+          </div>
+          <div class="mini-box">
+            <span>🏪</span>
+            <p>Shop Branding</p>
+          </div>
+          <div class="mini-box">
+            <span>📦</span>
+            <p>Product Labels</p>
+          </div>
+          <div class="mini-box">
+            <span>🖼️</span>
+            <p>Wall Decals</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-tag">About Us</div>
+      <h2 class="section-title">Creative Branding Through Stickers & Print</h2>
+      <p class="section-sub">
+        We help businesses, shops, startups, and individuals create eye-catching
+        branding through premium sticker solutions and custom print work.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-box">
+          <h3>Who We Are</h3>
+          <p>
+            Visual Stickers is a creative sticker and branding business based in
+            Coimbatore, focused on delivering bold, attractive, and long-lasting
+            visual branding solutions.
+          </p>
+          <p>
+            From vehicle wraps and storefront branding to custom labels and wall decals,
+            we handle every project with design precision and print quality.
+          </p>
+          <a href="#contact" class="btn-main">Talk to Us</a>
+        </div>
+
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon">🎨</div>
+            <div>
+              <h4>Custom Design Support</h4>
+              <p>We help you create artwork that matches your business identity.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🛠️</div>
+            <div>
+              <h4>Professional Installation</h4>
+              <p>Perfect application for vehicles, glass, walls, and storefronts.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon">🌟</div>
+            <div>
+              <h4>Premium Finish</h4>
+              <p>High-quality materials with sharp printing and long-lasting durability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-tag">Our Services</div>
+      <h2 class="section-title">Everything You Need for Visual Branding</h2>
+      <p class="section-sub">
+        From business branding to vehicle wraps, we provide custom sticker and print solutions tailored to your needs.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Vehicle Stickers & Wraps</h3>
+          <p>Custom branding for cars, bikes, autos, vans, buses, and commercial vehicles.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Shop & Office Branding</h3>
+          <p>Glass stickers, office graphics, storefront branding, sign decals, and promotional visuals.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Product Labels</h3>
+          <p>Waterproof, durable, and attractive custom labels for packaging and products.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🖼️</div>
+          <h3>Wall & Glass Decals</h3>
+          <p>Decorative and branding decals for homes, offices, showrooms, and retail spaces.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🎯</div>
+          <h3>Custom Promotional Stickers</h3>
+          <p>Perfect for campaigns, giveaways, brand promotion, and business marketing.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">⚡</div>
+          <h3>Fast Turnaround</h3>
+          <p>Quick response, fast printing, and urgent order support when timelines matter.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why" class="why">
+    <div class="container">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">Built for Quality, Speed & Creativity</h2>
+      <p class="section-sub">
+        We combine design quality, durable materials, and customer-friendly service to give your brand a standout visual identity.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-number">01</div>
+          <div>
+            <h4>Premium UV-Resistant Material</h4>
+            <p>Long-lasting sticker materials that stay sharp and vibrant outdoors.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">02</div>
+          <div>
+            <h4>Creative Design Assistance</h4>
+            <p>We help shape your idea into a polished final branding design.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">03</div>
+          <div>
+            <h4>Affordable for Every Budget</h4>
+            <p>Professional quality solutions for individuals, shops, and growing businesses.</p>
+          </div>
+        </div>
+
+        <div class="why-card">
+          <div class="why-number">04</div>
+          <div>
+            <h4>Fast & Reliable Service</h4>
+            <p>We respect deadlines and deliver without compromising on finish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="section-tag">How It Works</div>
+      <h2 class="section-title">Simple Process, Strong Results</h2>
+      <p class="section-sub">
+        We keep the process smooth so you can get your custom branding done quickly and professionally.
+      </p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="step">1</div>
+          <h4>Share Your Requirement</h4>
+          <p>Tell us what you need — size, design, purpose, or branding idea.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step">2</div>
+          <h4>Design & Approval</h4>
+          <p>We prepare the design and finalize it after your approval.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step">3</div>
+          <h4>Print & Production</h4>
+          <p>Your order is printed using quality materials and precision finishing.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step">4</div>
+          <h4>Delivery / Installation</h4>
+          <p>We deliver or install based on your project requirement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-tag">Contact Us</div>
+      <h2 class="section-title">Let’s Create Something Bold</h2>
+      <p class="section-sub">
+        Reach out today for custom sticker printing, branding, vehicle wraps, or business design work.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Get in Touch</h3>
+          <p>We’re ready to help you with your next sticker or branding project.</p>
+
+          <div class="contact-list">
+            <a href="tel:+919944678771" class="contact-item">
+              <span>📞</span> +91 99446 78771
+            </a>
+
+            <a href="mailto:thevisualstickers@gmail.com" class="contact-item">
+              <span>✉️</span> thevisualstickers@gmail.com
+            </a>
+
+            <div class="contact-item">
+              <span>📍</span> Coimbatore, Tamil Nadu
+            </div>
+
+            <a href="https://wa.me/919944678771" target="_blank" class="contact-item">
+              <span>💬</span> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <h3>Need a Quick Quote?</h3>
+          <p>
+            Message us directly on WhatsApp or call us to discuss your design, quantity, size, and project type.
+          </p>
+
+          <div class="quote-box">
+            <h4>Free Quote Available</h4>
+            <p>
+              Share your requirement today and get a quick estimate for your custom sticker or branding order.
+            </p>
+
+            <div class="quote-actions">
+              <a href="https://wa.me/919944678771?text=Hi%20Visual%20Stickers%2C%20I%20need%20a%20quote%20for%20custom%20stickers." target="_blank">
+                WhatsApp for Quote
+              </a>
+              <a href="tel:+919944678771">
+                Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <h2>Brand It. Print It. Stick It.</h2>
+    <p>
+      Visual Stickers helps you transform your brand into something bold, attractive, and memorable.
+    </p>
+    <a href="https://wa.me/919944678771?text=Hi%20Visual%20Stickers%2C%20I%20want%20to%20know%20more%20about%20your%20services." target="_blank" class="btn-main">
+      Start Your Project
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <span>Visual Stickers</span> · Coimbatore · All rights reserved
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/919944678771?text=Hi%20Visual%20Stickers%2C%20I%20need%20more%20details." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    💬
+  </a>
+
+</body>
+</html>
