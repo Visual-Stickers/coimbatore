@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visual Stickers – Custom Sticker Solutions</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --navy:#0d1b2e;
+    --red:#e63a1e;
+    --yellow:#d4e600;
+    --white:#fff;
+    --light:#f4f6fa;
+    --muted:#5a6a7e;
+    --border:#dde3f0;
+  }
+  body{font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white)}
+  a{text-decoration:none;color:inherit}
+
+  /* NAV */
+  nav{background:var(--navy);padding:14px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+  .nav-logo{display:flex;align-items:center;gap:12px}
+  .nav-logo img{height:44px;width:44px;border-radius:8px;object-fit:cover}
+  .nav-logo-text{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:1px;color:var(--yellow)}
+  .nav-logo-text span{color:var(--red)}
+  .nav-links{display:flex;gap:28px}
+  .nav-links a{color:#94a3b8;font-size:14px;font-weight:400;transition:color .2s}
+  .nav-links a:hover{color:var(--yellow)}
+
+  /* HERO */
+  .hero{background:var(--navy);color:#fff;padding:70px 40px 60px;position:relative;overflow:hidden}
+  .hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;background:rgba(212,230,0,0.05);pointer-events:none}
+  .hero::after{content:'';position:absolute;right:80px;bottom:-60px;width:250px;height:250px;border-radius:50%;background:rgba(230,58,30,0.08);pointer-events:none}
+  .hero-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:60px}
+  .hero-text{flex:1}
+  .hero-badge{display:inline-block;background:rgba(212,230,0,0.12);color:var(--yellow);border:1px solid rgba(212,230,0,0.3);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+  .hero h1{font-family:'Bebas Neue',sans-serif;font-size:68px;line-height:1;letter-spacing:1px;margin-bottom:18px}
+  .hero h1 .accent-red{color:var(--red)}
+  .hero h1 .accent-yellow{color:var(--yellow)}
+  .hero p{font-size:16px;color:#94a3b8;line-height:1.75;max-width:440px;margin-bottom:32px}
+  .btn-main{display:inline-block;background:var(--red);color:#fff;padding:14px 30px;border-radius:8px;font-size:15px;font-weight:500;margin-right:10px;transition:background .2s}
+  .btn-main:hover{background:#c5301a}
+  .btn-outline{display:inline-block;color:var(--yellow);border:1px solid rgba(212,230,0,0.35);padding:13px 22px;border-radius:8px;font-size:15px;font-weight:400;transition:background .2s}
+  .btn-outline:hover{background:rgba(212,230,0,0.08)}
+  .hero-visual{flex:0 0 280px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .s-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);border-radius:14px;padding:20px 16px;text-align:center}
+  .s-card-icon{font-size:26px;margin-bottom:8px}
+  .s-card-label{font-size:12px;color:#94a3b8;font-weight:400}
+
+  /* SERVICES */
+  .section{max-width:1000px;margin:0 auto;padding:64px 40px}
+  .section-tag{display:inline-block;background:rgba(230,58,30,0.1);color:var(--red);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+  .section-title{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:.5px;margin-bottom:8px}
+  .section-sub{color:var(--muted);font-size:15px;margin-bottom:40px}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .srv{background:var(--light);border-radius:14px;padding:26px 22px;border:1px solid var(--border);transition:border-color .2s,transform .2s}
+  .srv:hover{border-color:#d4e600;transform:translateY(-3px)}
+  .srv-icon{width:48px;height:48px;background:var(--navy);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+  .srv h3{font-size:15px;font-weight:500;margin-bottom:8px;color:var(--navy)}
+  .srv p{font-size:13px;color:var(--muted);line-height:1.65}
+
+  /* GALLERY STRIP */
+  .gallery-strip{background:var(--navy);padding:48px 40px}
+  .gallery-inner{max-width:1000px;margin:0 auto}
+  .gallery-title{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#fff;margin-bottom:4px}
+  .gallery-sub{color:#64748b;font-size:14px;margin-bottom:28px}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gallery-box{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-size:28px;color:#fff;transition:background .2s}
+  .gallery-box span{font-size:12px;color:#64748b;font-weight:400}
+  .gallery-box:hover{background:rgba(212,230,0,0.07)}
+
+  /* WHY US */
+  .why-section{background:var(--light);padding:64px 40px}
+  .why-inner{max-width:1000px;margin:0 auto}
+  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+  .why-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:22px}
+  .why-num{width:40px;height:40px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--yellow)}
+  .why-item h4{font-size:14px;font-weight:500;margin-bottom:5px;color:var(--navy)}
+  .why-item p{font-size:13px;color:var(--muted);line-height:1.6}
+
+  /* CTA BAND */
+  .cta-band{background:var(--red);color:#fff;padding:60px 40px;text-align:center}
+  .cta-band h2{font-family:'Bebas Neue',sans-serif;font-size:46px;margin-bottom:12px}
+  .cta-band p{font-size:16px;opacity:.88;margin-bottom:32px}
+  .contact-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+  .chip{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:12px 20px;font-size:14px;color:#fff;font-weight:400}
+  .chip-icon{font-size:16px}
+
+  /* FOOTER */
+  footer{background:var(--navy);text-align:center;padding:24px 40px;font-size:12px;color:#475569;border-top:1px solid rgba(255,255,255,0.06)}
+  footer span{color:var(--yellow)}
+
+  /* RESPONSIVE */
+  @media(max-width:720px){
+    nav{padding:12px 20px}
+    .hero{padding:50px 20px 44px}
+    .hero-inner{flex-direction:column;gap:32px}
+    .hero h1{font-size:48px}
+    .hero-visual{width:100%}
+    .section{padding:48px 20px}
+    .services-grid{grid-template-columns:1fr}
+    .gallery-strip{padding:40px 20px}
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    .why-section{padding:48px 20px}
+    .why-grid{grid-template-columns:1fr}
+    .cta-band{padding:48px 20px}
+    footer{padding:20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <img src="data:image/jpeg;base64,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" alt="Visual Stickers Logo">
+    <div class="nav-logo-text">Visual<span>Stickers</span></div>
+  </div>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">Custom Sticker Solutions</div>
+      <h1>
+        Stick Your <span class="accent-red">Brand</span><br>
+        <span class="accent-yellow">Everywhere</span>
+      </h1>
+      <p>We design and print high-quality custom stickers for vehicles, businesses, storefronts, and more. Bold. Durable. Made for you — right here in Coimbatore.</p>
+      <a href="#contact" class="btn-main">Get a Free Quote</a>
+      <a href="#services" class="btn-outline">Our Services →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="s-card"><div class="s-card-icon">🚗</div><div class="s-card-label">Vehicle Wraps</div></div>
+      <div class="s-card"><div class="s-card-icon">🏪</div><div class="s-card-label">Shop Branding</div></div>
+      <div class="s-card"><div class="s-card-icon">📦</div><div class="s-card-label">Product Labels</div></div>
+      <div class="s-card"><div class="s-card-icon">🖼️</div><div class="s-card-label">Wall Decals</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<div id="services">
+  <div class="section">
+    <div class="section-tag">What We Do</div>
+    <div class="section-title">Our Services</div>
+    <div class="section-sub">Everything you need to make your brand stand out</div>
+    <div class="services-grid">
+      <div class="srv">
+        <div class="srv-icon">🚗</div>
+        <h3>Vehicle Stickers & Wraps</h3>
+        <p>Full and partial vehicle wraps, window graphics, and fleet branding for cars, bikes, autos, and trucks.</p>
+      </div>
+      <div class="srv">
+        <div class="srv-icon">🏢</div>
+        <h3>Business Branding</h3>
+        <p>Signboards, glass stickers, office decals, and shop front branding that makes your business pop.</p>
+      </div>
+      <div class="srv">
+        <div class="srv-icon">📋</div>
+        <h3>Custom Labels & Prints</h3>
+        <p>Product labels, packaging stickers, waterproof vinyl, and promotional prints of all sizes.</p>
+      </div>
+      <div class="srv">
+        <div class="srv-icon">🖼️</div>
+        <h3>Wall & Glass Decals</h3>
+        <p>Interior wall murals, office glass branding, retail displays, and decorative vinyl decals.</p>
+      </div>
+      <div class="srv">
+        <div class="srv-icon">🎨</div>
+        <h3>Custom Design</h3>
+        <p>Our in-house design team helps you create the perfect artwork from scratch — just share your idea.</p>
+      </div>
+      <div class="srv">
+        <div class="srv-icon">🚀</div>
+        <h3>Fast Turnaround</h3>
+        <p>We deliver quickly without compromising print quality. Urgent orders welcome — just ask!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY STRIP -->
+<div class="gallery-strip">
+  <div class="gallery-inner">
+    <div class="gallery-title">Our Work</div>
+    <div class="gallery-sub">Trusted by businesses across Coimbatore & beyond</div>
+    <div class="gallery-grid">
+      <div class="gallery-box">🚌<span>Bus Branding</span></div>
+      <div class="gallery-box">🏍️<span>Bike Wraps</span></div>
+      <div class="gallery-box">🏬<span>Store Fronts</span></div>
+      <div class="gallery-box">📦<span>Product Labels</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<div id="why" class="why-section">
+  <div class="why-inner">
+    <div class="section-tag">Why Choose Us</div>
+    <div class="section-title">We're Different</div>
+    <div class="section-sub">Quality you can see, service you can trust</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div>
+          <h4>Premium UV-Resistant Materials</h4>
+          <p>We use top-grade vinyl that lasts for years outdoors without fading or peeling.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div>
+          <h4>In-House Design Team</h4>
+          <p>No extra charge for design help — we work with you to get it perfect before printing.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div>
+          <h4>Fast Delivery</h4>
+          <p>Same-day and next-day options available. We understand your deadlines matter.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div>
+          <h4>Affordable for All Budgets</h4>
+          <p>Competitive pricing for individuals, startups, and large businesses alike.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA / CONTACT -->
+<div id="contact" class="cta-band">
+  <h2>Let's Create Something Bold</h2>
+  <p>Get in touch today for a free quote on your custom sticker order</p>
+  <div class="contact-row">
+    <a href="tel:+919944678771" class="chip"><span class="chip-icon">📞</span> +91 99446 78771</a>
+    <a href="mailto:thevisualstickers@gmail.com" class="chip"><span class="chip-icon">✉️</span> thevisualstickers@gmail.com</a>
+    <div class="chip"><span class="chip-icon">📍</span> Coimbatore, Tamil Nadu</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 <span>Visual Stickers</span> · Coimbatore · All rights reserved
+</footer>
+
+</body>
+</html>
